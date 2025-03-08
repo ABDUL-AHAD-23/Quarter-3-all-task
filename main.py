@@ -15,119 +15,202 @@
 print("Hello world")
 print()
 
+
 # Task 5: Create 2nd Python code on different data types and upload on GitHub
 
-       # Integer Data Type Example: Age Verification System
-
+# Integer Data Type Example: Age Verification System
 print("Welcome to the age verification system!")
-try:
-    age = int(input("Enter your age:"))  
+age = int(input("Enter your age:"))  
 
-    if age >= 18:
-        print("You are eligible for voting") 
-        print() 
-    else:
-        print("You are not eligible for voting")  
-        print()
-except ValueError:
-    print("Please enter a numeric age only")
+if age >= 18:
+    print("You are eligible for voting") 
+    print() 
+else:
+    print("You are not eligible for voting")  
     print()
 
-        # Float Data Type Example: Temperature Checker
+# Float Data Type Example: Temperature Checker
 
 print("Welcome to the temperature checker!")
-try:
-    temperature = float(input("Enter the temperature: "))  
 
-    if temperature == 36.1 :
-        print("You have a healthy temperature")
-        print()
-    elif temperature < 35.5:
-        print("You have a Hypothermia (dangerous) temperature")  
-        print()
-    elif temperature > 38.5:
-        print("You have a Fever (dangerous) temperature")
-        print()
-    elif temperature > 41.:
-        print("You have a Life-threatening temperature")
-        print()
-except ValueError:
-    print("Please enter a numeric temperature only")
+temperature = float(input("Enter the temperature: "))  
+
+if temperature == 36.1 :
+    print("You have a healthy temperature")
+    print()
+elif temperature < 35.5:
+    print("You have a Hypothermia (dangerous) temperature")  
+    print()
+elif temperature > 38.5:
+    print("You have a Fever (dangerous) temperature")
+    print()
+elif temperature > 41.:
+    print("You have a Life-threatening temperature")
     print()
 
-        # String Data Type Example: Name Length Checker
+# String Data Type Example: Name Length Checker
 
 print("Welcome to the name length checker!")
-try:
-    name = str(input("Enter your name: "))
 
-    if len(name) > 12:
-        print("You have a long name")
-    elif len(name) == 12:
-        print("you have a perfect name")
-    else:
-        print("You have a short name")
-        print()
-except ValueError:  
-    print("Please enter a alphabetic name only")
+name = str(input("Enter your name: "))
+
+if len(name) > 12:
+    print("You have a long name")
+elif len(name) == 12:
+    print("you have a perfect name")
+else:
+    print("You have a short name")
     print()
 
-        # Boolean Data Type Example: Simple Login System
+# Boolean Data Type Example: Simple Login System
 
 print("Welcome to the login system!")
-try:
-    password = input("Enter the password: ")  
 
-    if password == "123":
-        print("Access granted!")
-    elif password == "abc":
-        print("Access granted!")
+password = input("Enter the password: ")  
+
+if password == "123":
+    print("Access granted!")
+elif password == "abc":
+    print("Access granted!")
+else:
+    print("Access denied!")
+    print()
+
+
+# Task 6: Create 3rd Python code on following pyhon operators and upload on GitHub
+ 
+        # Arithmetic Operators Example: Simple Calculator 
+    print("Welcome to the simple calculator!")
+
+    num1 = float(input("Enter the first number: "))  
+    num2 = float(input("Enter the second number: "))  
+    operator = input("Enter the operator (+, -, *, /): ")  
+    results = 0
+def calculator(num1, num2, operator):
+    if operator == "+": 
+        results = num1 + num2
+    elif operator == "-":
+        results = num1 - num2
+    elif operator == "*":
+        results = num1 * num2
+    elif operator == "/":
+        results = num1 / num2
     else:
-        print("Access denied!")
+
+        print("Invalid operator")
+        print(f"The result is: { results}")   
         print()
-except ValueError:
-    print("Please enter a valid password")
-    print()
 
-        # List Data Type Example: Student Marks System  
+        # Comparison Operators Example: Simple Comparison System
+        print("Welcome to the simple comparison system!")
 
-print("Welcome to the student marks system!")
-try:    
-    marks = [int(x) for x in input("Enter the marks separated by space: ").split()]  
+    num1 = float(input("Enter the first number: "))  
+    num2 = float(input("Enter the second number: "))  
 
-    total_marks = 0
-    for mark in marks:
-        total_marks += mark
+    if num1 == num2:
+        print("The numbers are equal")
+    elif num1 > num2:
+        print("The first number is greater")
+    elif num1 < num2:
+        print("The second number is greater")
+    else:
+        print("Invalid input")
+        print()
 
-    print("Total marks:", total_marks)
-    print()
-except ValueError:
-    print("Please enter valid marks")
-    print()
+        # Logical Operators Example: Simple Logical System
+        print("Welcome to the simple logical system!")
 
-        # Tuple Data Type Example: Student Information System   
+    num1 = float(input("Enter the first number: "))  
+    num2 = float(input("Enter the second number: "))  
+    operator = input("Enter the operator (and, or, not): ")  
 
-print("Welcome to the student information system!")
-try:
-    student = tuple(input("Enter the student information separated by space: ").split())  
+    if operator == "and":
+        result = num1 and num2
+    elif operator == "or":
+        result = num1 or num2
+    elif operator == "not":
+        result = not num1
+    else:
+        print("Invalid operator")
+        print(f"The result is: {result}")
+        print()
 
-    print("Student information:", student)
-    print() 
-except ValueError:
-    print("Please enter valid student information")
-    print()
+        # Assignment Operators Example: Simple Assignment System    
+        print("Welcome to the simple assignment system!")
 
-        # Dictionary Data Type Example: Student Result System     
+    num1 = float(input("Enter the first number: "))  
+    num2 = float(input("Enter the second number: "))  
+    operator = input("Enter the operator (=, +=, -=, *=, /=): ")  
 
-print("Welcome to the student result system!")
-try:
-    student = {"Name": input("Enter the name: "), "Roll No": int(input("Enter the roll no: ")), "Marks": int(input("Enter the marks: "))}  
+    if operator == "=":
+        result = num1
+    elif operator == "+=":
+        result = num1 + num2
+    elif operator == "-=":  
+        result = num1 - num2
+    elif operator == "*=":
+        result = num1 * num2    
+    elif operator == "/=":
+        result = num1 / num2
+    else:
+        print("Invalid operator")
+        print(f"The result is: {result}")
+        print() 
 
-    print("Student result:", student)
-    print()
-except ValueError:
-    print("Please enter valid student information")
-    print() 
+        # Identity Operators Example: Simple Identity System
+        print("Welcome to the simple identity system!")
 
+    num1 = float(input("Enter the first number: "))  
+    num2 = float(input("Enter the second number: "))  
+    operator = input("Enter the operator (is, is not): ")  
 
+    if operator == "is":
+        result = num1 is num2    
+    elif operator == "is not":  
+        result = num1 is not num2
+    else:
+        print("Invalid operator")   
+        print(f"The result is: {result}")   
+        print()     
 
+        # Membership Operators Example: Simple Membership System
+        print("Welcome to the simple membership system!")
+
+    num1 = float(input("Enter the first number: "))  
+    num2 = float(input("Enter the second number: "))  
+    operator = input("Enter the operator (in, not in): ")  
+
+    if operator == "in":
+        result = num1 in num2
+    elif operator == "not in":
+        result = num1 not in num2
+    else:
+        print("Invalid operator")
+        print(f"The result is: {result}")
+        print() 
+
+        # Bitwise Operators Example: Simple Bitwise System
+        print("Welcome to the simple bitwise system!")  
+
+    num1 = float(input("Enter the first number: "))  
+    num2 = float(input("Enter the second number: "))    
+    operator = input("Enter the operator (&, |, ^, ~, <<, >>): ")  
+
+    if operator == "&":
+        result = num1 & num2    
+    elif operator == "|":
+        result = num1 | num2
+    elif operator == "^":    
+        result = num1 ^ num2
+    elif operator == "~":
+        result = ~num1    
+    elif operator == "<<":
+        result = num1 << num2
+    elif operator == ">>":
+        result = num1 >> num2        
+    else:
+        print("Invalid operator")
+        print(f"The result is: {result}")
+        print()             
+
+        
